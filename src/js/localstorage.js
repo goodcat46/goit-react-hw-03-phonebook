@@ -1,5 +1,3 @@
-'use strict';
-
 const save = (key, value) => {
   try {
     const serializedState = JSON.stringify(value);
@@ -25,9 +23,9 @@ const remove = key => {
     console.log('Remove item error: ', error.message);
   }
 };
-
-export default {
+const localStorageActions = {
   save,
   load,
   remove,
 };
+export default localStorageActions;
