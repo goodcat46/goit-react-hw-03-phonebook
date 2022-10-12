@@ -1,0 +1,20 @@
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  padding: 16px;
+  margin: 0;
+
+  width: 80%;
+
+  box-shadow: 0 0 5px rgba(122, 122, 122, 0.5);
+}
+.notification {
+  list-style: none;
+
+  font-size: 20px;
+  font-weight: bold;
+  padding: 8px;
+}
+ 

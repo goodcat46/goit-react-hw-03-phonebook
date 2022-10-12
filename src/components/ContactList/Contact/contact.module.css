@@ -1,0 +1,30 @@
+.contact{
+  display: flex;
+  align-items: center;
+justify-content: space-between;
+
+  font-size: 16px;
+
+  padding: 8px;
+
+  box-shadow: 0 0 5px rgba(122, 122, 122, 0.5);
+}
+.contactData{
+  display: flex;
+  align-items: center;
+gap: 16px;
+}
+.name{}
+.number{}
+.button{
+  padding: 4px 8px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(122, 122, 122, 0.5);
+}
+.button:hover{
+  background-color: rgb(255, 72, 72);
+  box-shadow: 0 0 8px rgba(255, 72, 72, 1);
+}
+.button:active{
+  box-shadow: 0 0 3px rgba(255, 72, 72, 1);
+}
