@@ -22,27 +22,27 @@ export class App extends Component {
   };
   handleAddContact = ({ id, name, number }) => {
     let contacts = this.getContacts();
-    const namesArr = contacts.map(el => el.name.toLowerCase());
+    const namesArr = this.getContacts().map(el => el.name.toLowerCase());
     if (!namesArr.includes(name.toLowerCase())) {
       localstorage.save('contacts', [
         ...contacts,
         { id, name: name, number: number },
       ]);
       this.setState(() => ({
-        contacts: contacts,
+        contacts: this.getContacts(),
       }));
     } else {
       alert(`"${name}" is already added to contact list.`);
     }
   };
   handleDeleteContact = userId => {
-    let contacts = this.getContacts();
+    
     localstorage.save(
       'contacts',
-      contacts.filter(user => user.id !== userId)
+      this.getContacts().filter(user => user.id !== userId)
     );
     this.setState(() => ({
-      contacts: contacts,
+      contacts: this.getContacts(),
     }));
   };
   handleChangeSearch = evt => {
